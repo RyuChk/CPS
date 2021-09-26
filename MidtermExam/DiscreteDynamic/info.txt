@@ -1,0 +1,61 @@
+-*- Discrete Dynamic and state Machine -*-
+
+    Continous vs. Discrete
+  : System Can both flow    |   System can jump
+    [Differential Euqation] |   [State Machine / Automation]
+
+
+-*- Discrete 
+    - Discrete is individually seperate / distinct
+    - Sequence event occur at an *! Instant Time !*
+    - Stack of step or task taken value
+    \\ As step of ladder graph \\ State machine design
+
+        Example : Garage car sensing
+
+-*- Counter:
+                     ____________
+        Up    ----> |            |
+                    |   Sum I    | -----> Output (Count)
+        Down  ----> |____________|
+
+    Input   := {up, down} => R {present, absent}
+    Format  =    Input   :   ({up, down} --> {absent, present})
+                 Output  :   ({count} --> {absent} U N)
+
+
+-*- The model for integrator / Counter
+    - Both integrator actor and counter have state
+
+-*- Finite-state Machine / FSM
+    - Called finite state for discrete model
+
+    States := {State1, State2, State3}
+
+Transitions :
+ ____________
+|            | guard / Action
+|  State 1   |     ----->       Next state
+|____________|
+
+Signals Type
+    Pure-Signal := Simple signal 0 / 1
+    Time-Signal := Depend on time
+-*- Hysteresis 
+    - Looping !
+    - StateChange by event trigger
+
+Event-triggered model:
+    - suppose all iput are discrete and reaction occures when any input is present.
+    input := x = {present, absent}
+    output := y = {present, absent}
+
+Time-triggered model:
+    - Suppose all input are discrete and reaction occur on tick of clock
+
+Defualt transition:
+    - Loop to itself where no guard / trigger are present.
+
+Extended state machine:
+    - Varialble which is not input of the machine.
+

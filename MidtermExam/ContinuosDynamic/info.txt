@@ -1,0 +1,54 @@
+-*- Modeling of Continous Dynamic -*- 
+    - Create a model or formula for specific task
+
+Degrees of Freedom
+    - A number of independent parameters that define its configuration or state
+
+    SIX - Degree of freedom :
+        POSITON : x, y, z
+        Orientation : pitch, yaw, roll
+    
+    Notation : 
+        Velocity --> x dot 
+        Acceleration --> x double dot
+
+Newton's Second Law
+    - F = ma / F(t) = M(x dounle dot)(t)
+
+Actor Model of System : 
+    - A continous-time system (one that operates on continous time signals) 
+    - Actor represent a unit of computation
+    - Actor can :
+        --> Create more actors
+        --> Send message to other actors
+    - Can execute multiple actors at the same time
+
+    DIAGRAM : 
+               ___________
+              | PARAMETER | 
+    INPUT   ->|   P , Q   |->   OUTPUT
+              |___________|
+
+    EXAMPLE : Helicopter actors
+                 ________________________
+                |         I.yy           | # < inside is parameter which is inertia and inital velocity of y>
+    T.y   ->    |   Theta.initial.ydot   |->   Theta.y
+                |________________________|
+
+-------------------------------------------------- NOT SURE --------------------------------------------------------
+
+Casual  System : 
+    - A system is causal if its output depends only on current and past inputs.
+        ( รับต่า x เเค่ใน x( t-1 --> t-infinity ) ไม่สามาถใช้ x( t+1 ) หรือ xt ในอนาคตได้ )
+        example: y(t) = func1(t) + func2(t) + func3(t - 2) +  func4(t - 6) # < No func(t+1) MAKE THIS STATEMENT BE CASUAL SYSTEM >
+    
+    * PAST INPUT / PREVERIOUS INPUT *
+
+Memoryless Systems :
+    - A system has memory if the output depends not only on the current input, but also on past input. This mean Memoryless system is current input only
+
+    * CURRENT INPUT ONLY *
+
+Linearity and Time Invariance:
+    
+    * CASUAL AND !MEMORYLESS / CONSIDER PREVIOUS INPUT *

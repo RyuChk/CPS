@@ -1,0 +1,45 @@
+-*- What is Embedded System? -*-
+    - A computer system that have computer and software embedded into the product
+    - Mainly use to perform dedicated function or independion task as part of larger system
+    - * Mainly compose of microcontroller and microprocessors (microcontroller and microprocessors based system) * -
+
+Main Characteristic
+    - 1. Designed for specific task --> It is designed with sensor and software which only support task which it meant for.
+    - 2. Tightly constrained --> Very important for packing it inside other product or system
+    - 3. Reactive and Realtime --> Will react to change in enviroment in realtime.
+    - 4. Memory --> It's software is embedded inside the memory (ROM)
+    - 5. No UI
+    - 6. Low Power
+
+Computer component
+    - 1. Processor
+    - 2. Memory
+    - 3. I/O output mechanism
+
+Central Processing Unity( CPU )
+    - ALU --> Perform arithmetical and logical operations on the data recievedสฟ
+    - Register --> D flip-flop register word size memory
+    - Control Unit ( CU ) --> control flow of data and instruction within computer ( As name said --> Control Unit )
+
+    DIAGRAM :
+
+        PROCESSING = Control Unit / arithmetic Logic unit (ALU)
+                                    ^
+                                    |
+                                    V
+        INPUT ---> DATA --------> Memory ----> Information ---> OUTPUT
+                                    ^
+                                    |
+                                    V
+                              Storage Device
+
+Machine Cycle
+    - Main activity perform my CPU to execute the program instruction stored within memory
+
+    DIAGRAM :
+    |--------> Decode (CPU) instruction --------> Execute Commands ( ALU ) --------->|
+    |                                                                                |
+    |                                                                                |
+    |<-------- Ramdon Access Memory (RAM) : stored information execute by CPU <------|
+
+    * FROM highlevel ( PROGRAM LANGUAGE ) --> LOW level ( BINARY / ASSEMBLY )

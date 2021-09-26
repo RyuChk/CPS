@@ -1,0 +1,40 @@
+-*- Trances
+    - record of input, state, and output
+    Example:
+
+        sigG/        (signal)
+    Red -----> Green ----> so..on..(States)
+        \----> Red ----> (differece behavior)
+         sigR
+
+-*- Time-based State machine
+    - input/output --> continuous-time signal
+    - state must be on the same timeline used for time-based portion system
+
+    Example: 
+        
+    Thermostate with a continous-time input Signal
+                     _______________
+                    |               | ---> HeatOn
+        T(t) --->   | state machine |
+                    |_______________| ---> HeatOff
+
+         _________    T(t) >= 22/ HeatOff     _________
+        |         | -----------------------> |         |
+        | Cooling |                          | heating |
+        |_________| <----------------------- |_________|
+                      T(t) <= 18/ HeatOn
+
+    Input := T(t) : R --> R #temperature at time T(t)
+    Ouput := {heating, cooling} : Pure signal #Output heating cooling
+
+         # State Refiened from On/off to H(t) = 0/1
+                     _______________
+                    |               |
+        T(t) --->   | state machine | ----> H(t) = 0/1 # On/Off (Hybrid System)
+                    |_______________| 
+                    
+-*- Hybrid System
+    - the state refinement.
+
+** Based in slide **

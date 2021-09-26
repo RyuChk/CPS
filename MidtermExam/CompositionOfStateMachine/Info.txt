@@ -1,0 +1,27 @@
+-*- Composition of state machine
+
+Composition Kind
+    1. Spatial := How the components communicate between each other
+    2. Temporal := When do component Executed.
+
+-*- Sequential vs. Concurrent
+
+    !Sequenctial                |               !Concurrent
+    `Reaction independelty`                     `Simultaneous`
+
+
+Temporal Composition of State Machine
+    Concurrent := Asynchronous ( independelty ) --> Need interface actor model for state machine
+    Sequenctial := Synchronous ( Simultaneous )
+    
+Set-Theoretic definition
+    State_Machine := {
+        (S,I,O,u,iniS), inis = S
+        Where {
+            S := Set of state
+            I := set of input symbols
+            O := set of symbols
+            u := update func
+            iniS := initial state (start)
+        }
+    }
